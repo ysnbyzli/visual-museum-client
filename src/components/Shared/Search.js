@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { encodeDateYear } from "../../utils/date";
+import { ChevronRightIcon } from "./icons";
 
 function Search() {
   const [search, setSearch] = useState("");
@@ -23,7 +24,7 @@ function Search() {
   }, [search]);
 
   return (
-    <div className="w-[200px] text-xs mx-2 md:mx-0 md:text-sm md:w-[500px] relative">
+    <div className="w-[200px] text-xs mx-2 md:mx-0 md:text-sm md:w-[500px] relative z-50">
       <input
         placeholder="Ara"
         type="text"
@@ -47,7 +48,7 @@ function Search() {
               key={item?.id}
               className="px-5 py-3 flex cursor-pointer hover:bg-slate-50"
             >
-              <div className="h-10 w-10 mr-2 hidden md:flex">
+              <div className="h-10 w-10 mr-2 hidden md:flex md:items-center">
                 <img
                   src={item?.photo}
                   alt={item?.firstName}
@@ -56,10 +57,13 @@ function Search() {
               </div>
               <div className="flex flex-col">
                 <h4 className="font-semibold">{item?.fullName}</h4>
-                <div className="flex gap-2 text-xs text-gray-600">
+                <div className="flex gap-1 text-xs text-gray-600">
                   <span>{encodeDateYear(item?.dateOfBirth)}</span>-
                   <span>{encodeDateYear(item?.dateOfDeath)}</span>
                 </div>
+              </div>
+              <div className="ml-auto flex items-center justify-center">
+                <ChevronRightIcon />
               </div>
             </div>
           ))}
