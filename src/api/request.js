@@ -37,3 +37,13 @@ export const updateEvent = (id, data) => MuseumAPI.patch(`/events/${id}`, data);
 export const getEventsByLimit = (limit) => {
   return MuseumAPI.get(`/events?limit=${limit}`);
 };
+
+/**
+ *
+ * Statics
+ *
+ */
+
+export const getCategoriesAndCountByPerson = () => {
+  return MuseumAPI.get("/statics/persons/category-count");
+};

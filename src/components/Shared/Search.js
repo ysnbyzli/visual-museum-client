@@ -24,7 +24,7 @@ function Search() {
   }, [search]);
 
   return (
-    <div className="w-3/5 max-w-[500px] text-xs mx-2 md:mx-0 md:text-sm  relative z-50">
+    <div className="w-3/5 max-w-[500px] dark:text-black text-xs mx-2 md:mx-0 md:text-sm  relative z-50">
       <input
         placeholder="Ara"
         type="text"
@@ -40,13 +40,13 @@ function Search() {
           {result?.map((item) => (
             <div
               key={item?.id}
-              className="px-5 py-3 flex cursor-pointer hover:bg-slate-50"
+              className="flex px-5 py-3 cursor-pointer hover:bg-slate-50"
             >
-              <div className="h-10 w-10 mr-2 hidden md:flex md:items-center">
+              <div className="hidden w-10 h-10 mr-2 md:flex md:items-center">
                 <img
                   src={item?.photo}
                   alt={item?.firstName}
-                  className="w-full object-cover rounded-md"
+                  className="object-cover w-full rounded-md"
                 />
               </div>
               <div className="flex flex-col">
@@ -56,13 +56,13 @@ function Search() {
                   <span>{encodeDateYear(item?.dateOfDeath)}</span>
                 </div>
               </div>
-              <div className="ml-auto flex items-center justify-center">
+              <div className="flex items-center justify-center ml-auto">
                 <ChevronRightIcon />
               </div>
             </div>
           ))}
           {result.length === 0 && (
-            <div className="rounded-b-md border-l px-5 py-3 flex items-center justify-center text-xs">
+            <div className="flex items-center justify-center px-5 py-3 text-xs border-l rounded-b-md">
               "{search}" ile ilgili bir şey bulunamadı!
             </div>
           )}
