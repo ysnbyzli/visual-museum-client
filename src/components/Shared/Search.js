@@ -24,24 +24,18 @@ function Search() {
   }, [search]);
 
   return (
-    <div className="w-[200px] text-xs mx-2 md:mx-0 md:text-sm md:w-[500px] relative z-50">
+    <div className="w-3/5 max-w-[500px] text-xs mx-2 md:mx-0 md:text-sm  relative z-50">
       <input
         placeholder="Ara"
         type="text"
         onChange={({ target }) => setSearch(target.value)}
-        className={`w-full h-8 md:h-10 px-5 ${
-          isTyping
-            ? "rounded-t-md outline-none  border-t border-l border-r border-orange-500"
-            : "rounded-md border-none outline-none"
+        className={`w-full h-10 md:h-10 px-5 border rounded-md focus-within:outline-none ${
+          isTyping && "border-violet-300 border-2 rounded-b-none"
         }`}
       />
       {result && isTyping && (
         <div
-          className={`absolute left-0 w-full ${
-            isTyping &&
-            result.length > 0 &&
-            "rounded-b-md bg-white border-l border-r border-b border-orange-500"
-          }`}
+          className={`absolute left-0 w-full rounded-b-md bg-white border-violet-300 border-t-0 border-b-2 border-x-2`}
         >
           {result?.map((item) => (
             <div
@@ -68,7 +62,7 @@ function Search() {
             </div>
           ))}
           {result.length === 0 && (
-            <div className="bg-white rounded-b-md border-l px-5 py-3 flex items-center justify-center text-xs border-r border-b border-orange-500">
+            <div className="rounded-b-md border-l px-5 py-3 flex items-center justify-center text-xs">
               "{search}" ile ilgili bir şey bulunamadı!
             </div>
           )}

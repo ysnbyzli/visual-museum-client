@@ -6,12 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchAllPerson());
-  }, []);
-
   return (
     <div className="container mx-auto">
       <Home />

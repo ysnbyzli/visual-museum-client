@@ -16,3 +16,24 @@ export const updatePerson = (id, data) =>
   MuseumAPI.patch(`/persons/${id}`, data);
 
 export const findById = (id) => MuseumAPI.get(`/persons/${id}`);
+
+/**
+ *
+ * Event
+ *
+ */
+
+export const getEventsByPersonId = (id) =>
+  MuseumAPI.get(`/events/persons/${id}`);
+
+export const addEvent = (data) => MuseumAPI.post("/events", data);
+
+export const deleteEvent = (id) => MuseumAPI.delete(`/events/${id}`);
+
+export const getOneEvent = (id) => MuseumAPI.get(`/events/${id}`);
+
+export const updateEvent = (id, data) => MuseumAPI.patch(`/events/${id}`, data);
+
+export const getEventsByLimit = (limit) => {
+  return MuseumAPI.get(`/events?limit=${limit}`);
+};
