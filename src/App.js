@@ -1,11 +1,14 @@
-import Home from "./pages/Home";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { BrowserRouter } from "react-router-dom";
+import { Switcher } from "./router";
 
 function App() {
   return (
-    <div className="container mx-auto">
-      <Home />
+    <div>
+      <BrowserRouter>
+        <Switcher />
+      </BrowserRouter>
     </div>
   );
 }
