@@ -12,9 +12,16 @@
   body,
   #root {
     height: 100%;
-    @apply dark:bg-gray-900 dark:text-white;
+    @apply transition-all duration-300 ease-in-out dark:bg-backdrop dark:text-white;
   }
   body {
     font-family: "Montserrat", sans-serif;
   }
+}
+.slick-slide > div {
+  display: grid;
+  place-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 0px;
 }

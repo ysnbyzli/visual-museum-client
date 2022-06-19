@@ -18,7 +18,7 @@ function Home(props) {
     <div>
       <Header />
       <Slider />
-      <div className="flex flex-col my-10 md:flex-row">
+      <div className="container flex flex-col mx-auto my-10 md:flex-row">
         <LatestArticles />
         <Categories />
       </div>

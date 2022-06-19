@@ -1,12 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import SlickSlider from "react-slick";
 
 const settings = {
   infinite: true,
   speed: 2000,
-  slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToShow: 5,
+  slidesToScroll: 5,
   initialSlide: 0,
   arrows: false,
   autoplay: true,
@@ -15,8 +16,8 @@ const settings = {
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         infinite: true,
       },
     },
@@ -42,16 +43,18 @@ const Slider = () => {
   const persons = useSelector((state) => state.persons.data);
 
   return (
-    <div className="mt-5">
+    <div className="container mx-auto mt-5">
       <SlickSlider {...settings}>
         {persons.map(({ photo, _id, fullName }) => (
-          <div key={_id} className="h-96 w-30 rounded-lg px-1">
-            <img
-              src={photo}
-              alt={fullName}
-              className="h-96 w-64 object-cover rounded-md"
-            />
-            <h3 className="font-bold text-base p-1">{fullName}</h3>
+          <div key={_id} className="px-3 rounded-lg ">
+            <Link to={`/zaman-cizelgesi/${_id}`}>
+              <img
+                src={photo}
+                alt={fullName}
+                className="object-cover w-full rounded-md h-80"
+              />
+            </Link>
+            <h3 className="p-1 text-base font-bold">{fullName}</h3>
           </div>
         ))}
       </SlickSlider>
