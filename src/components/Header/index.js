@@ -7,7 +7,6 @@ import Search from "../Shared/Search";
 
 function Header() {
   const isDarkMode = useSelector(selectDarkMode);
-  console.log("🚀 ~ file: index.js ~ line 9 ~ Header ~ isDarkMode", isDarkMode);
 
   const dispatch = useDispatch();
 
@@ -21,7 +20,10 @@ function Header() {
   }, [isDarkMode]);
 
   return (
-    <div className="py-5 shadow-lg bg-gray-50 shadow-slate-50 dark:bg-backdrop dark:shadow-slate-900">
+    <div
+      className="py-5 shadow-lg shadow-slate-100 dark:bg-backdrop dark:shadow-slate-900"
+      style={{ background: "#fefefe" }}
+    >
       <div className="container flex items-center justify-between mx-auto">
         <Search />
         <div>

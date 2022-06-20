@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getEventsByLimit } from "../api/request";
-import Header from "../components/Header";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Categories from "../components/Home/Categories";
 import LatestArticles from "../components/Home/LatestArticles";
 import Slider from "../components/Shared/Slider";
@@ -16,7 +14,6 @@ function Home(props) {
 
   return (
     <div>
-      <Header />
       <Slider />
       <div className="container flex flex-col mx-auto my-10 md:flex-row">
         <LatestArticles />

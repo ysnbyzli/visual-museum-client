@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Timeline from "./pages/Timeline";
+import PersonDetail from "./pages/PersonDetail";
 
 export const ROUTES = [
   {
@@ -16,7 +16,7 @@ export const ROUTES = [
     title: "Zaman Çizelgesi",
     key: "TIMELINE",
     path: "/zaman-cizelgesi/:id",
-    element: <Timeline />,
+    element: <PersonDetail />,
   },
 ];
 
