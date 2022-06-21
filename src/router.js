@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import NotFoundPage from "./pages/404";
 import Home from "./pages/Home";
+import Persons from "./pages/Persons";
 import PersonDetail from "./pages/PersonDetail";
 
 export const ROUTES = [
@@ -14,6 +15,13 @@ export const ROUTES = [
   },
   {
     id: "2",
+    title: "Kişiler",
+    key: "PERSONS",
+    path: "/kisiler",
+    element: <Persons />,
+  },
+  {
+    id: "3",
     title: "Zaman Çizelgesi",
     key: "TIMELINE",
     path: "/detail/:id",
