@@ -23,8 +23,8 @@ export const ROUTES = [
 export const Switcher = () => {
   return (
     <Routes>
-      {ROUTES.map(({ path, element, exact }) => (
-        <Route path={path} element={element} exact={exact} />
+      {ROUTES.map(({ path, element, exact, id }) => (
+        <Route key={id} path={path} element={element} exact={exact} />
       ))}
     </Routes>
   );
