@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import NotFoundPage from "./pages/404";
 import Home from "./pages/Home";
 import PersonDetail from "./pages/PersonDetail";
 
@@ -23,6 +24,7 @@ export const ROUTES = [
 export const Switcher = () => {
   return (
     <Routes>
+      <Route path="*" element={<NotFoundPage />} />
       {ROUTES.map(({ path, element, exact, id }) => (
         <Route key={id} path={path} element={element} exact={exact} />
       ))}
