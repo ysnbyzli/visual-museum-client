@@ -15,7 +15,7 @@ export const ROUTES = [
     id: "2",
     title: "Zaman Çizelgesi",
     key: "TIMELINE",
-    path: "/zaman-cizelgesi/:id",
+    path: "/detail/:id",
     element: <PersonDetail />,
   },
 ];

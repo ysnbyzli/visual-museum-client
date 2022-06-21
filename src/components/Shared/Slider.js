@@ -47,7 +47,7 @@ const Slider = () => {
       <SlickSlider {...settings}>
         {persons.map(({ photo, _id, fullName }) => (
           <div key={_id} className="px-3 rounded-lg ">
-            <Link to={`/zaman-cizelgesi/${_id}`}>
+            <Link to={`/detail/${_id}`}>
               <img
                 src={photo}
                 alt={fullName}

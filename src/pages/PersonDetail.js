@@ -41,7 +41,7 @@ const Timeline = () => {
 
   return (
     <div className="container pt-3 pb-10 mx-auto">
-      <article>
+      <article className="px-1 md:px-0">
         <div className="flex items-center ">
           <h1 className="mb-3 text-2xl font-bold">{`${person?.firstName} ${person?.lastName}`}</h1>
           <span className="pb-2 ml-3">({person?.category?.title})</span>
@@ -53,7 +53,9 @@ const Timeline = () => {
       </article>
       {data && data.length > 0 && (
         <div>
-          <h2 className="my-3 text-2xl font-bold">Zaman Çizelgesi</h2>
+          <h2 className="px-1 my-3 mt-10 text-2xl font-bold md:px-0">
+            Zaman Çizelgesi
+          </h2>
           <div className="w-full md:max-w-[1200px] mx-auto">
             <Chrono
               items={items}
