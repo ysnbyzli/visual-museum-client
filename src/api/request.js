@@ -17,6 +17,9 @@ export const updatePerson = (id, data) =>
 
 export const findById = (id) => MuseumAPI.get(`/persons/${id}`);
 
+export const findTopViewingPersons = () =>
+  MuseumAPI.get("/persons/top-viewing");
+
 /**
  *
  * Event
