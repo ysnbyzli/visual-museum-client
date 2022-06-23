@@ -31,7 +31,9 @@ function Home() {
       </div>
       <div className="container flex items-center mx-auto">
         <div className="py-3 pr-12">
-          <h1 className="text-6xl font-bold text-blue-700">Kronoloji</h1>
+          <h1 className="text-6xl font-bold text-blue-700">
+            Kronolojik <br /> Olaylar
+          </h1>
           <p className="mt-5 text-sm">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
             ea ad laborum in praesentium, cum quae eligendi architecto,
