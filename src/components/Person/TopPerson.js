@@ -22,7 +22,7 @@ const TopPerson = () => {
       <ul className="pt-3 space-y-3">
         {topPersons.map((person, index) => (
           <li className="relative flex items-center " key={person?._id}>
-            <Link to="/" className="cursor-pointer ">
+            <Link to={`/kisiler/${person._id}`} className="cursor-pointer ">
               {index <= 2 && (
                 <span
                   className={`absolute ${

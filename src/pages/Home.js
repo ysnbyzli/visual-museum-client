@@ -12,7 +12,7 @@ function Home() {
             Zaman <br />
             <span>Çizelgesi</span>
           </h1>
-          <p className="mt-5 text-sm">
+          <p className="mt-5 text-sm leading-6">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
             ea ad laborum in praesentium, cum quae eligendi architecto,
             consectetur perferendis minus accusamus tempore delectus, ut autem
@@ -34,7 +34,7 @@ function Home() {
           <h1 className="text-6xl font-bold text-blue-700">
             Kronolojik <br /> Olaylar
           </h1>
-          <p className="mt-5 text-sm">
+          <p className="mt-5 text-sm leading-6">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente
             ea ad laborum in praesentium, cum quae eligendi architecto,
             consectetur perferendis minus accusamus tempore delectus, ut autem

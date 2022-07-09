@@ -15,7 +15,7 @@ export const deletePerson = (id) => MuseumAPI.delete(`/persons/${id}`);
 export const updatePerson = (id, data) =>
   MuseumAPI.patch(`/persons/${id}`, data);
 
-export const findById = (id) => MuseumAPI.get(`/persons/${id}`);
+export const findById = (id) => MuseumAPI.get(`/persons/detail/${id}`);
 
 export const findTopViewingPersons = () =>
   MuseumAPI.get("/persons/top-viewing");

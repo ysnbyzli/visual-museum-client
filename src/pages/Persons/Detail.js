@@ -2,14 +2,13 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { fetchEventsByPersonId } from "../store/timelineSlice";
+import { fetchEventsByPersonId } from "../../store/timelineSlice";
 import { Chrono } from "react-chrono";
-import { encodeDate } from "../utils/date";
+import { encodeDate } from "../../utils/date";
 import MDEditor from "@uiw/react-md-editor";
-import Tag from "../components/Shared/Tag";
-import { selectDarkMode } from "../store/appSlice";
+import Tag from "../../components/Shared/Tag";
 import { useState } from "react";
-import { findById } from "../api/request";
+import { findById } from "../../api/request";
 
 const Timeline = () => {
   const { id } = useParams();
@@ -53,7 +52,7 @@ const Timeline = () => {
       </article>
       {data && data.length > 0 && (
         <div>
-          <h2 className="px-1 my-3 mt-10 text-2xl font-bold md:px-0">
+          <h2 className="px-1 my-3 mt-10 text-2xl font-bold text-blue-700 md:px-0">
             Zaman Çizelgesi
           </h2>
           <div className="w-full md:max-w-[1200px] mx-auto">
@@ -61,9 +60,10 @@ const Timeline = () => {
               items={items}
               enableOutline
               theme={{
-                primary: "#1db954",
-                secondary: "#ee4c58",
+                primary: "#34ace0",
+                secondary: "#227093",
                 titleColorActive: "#ffffff",
+                cardBgColor: "#ffffff",
               }}
               fontSizes={{
                 cardSubtitle: "0.85rem",

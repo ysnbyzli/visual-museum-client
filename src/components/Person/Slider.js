@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
 import SlickSlider from "react-slick";
 import Card from "./Card";
 
@@ -59,7 +58,6 @@ const settings = {
 
 const Slider = () => {
   const persons = useSelector((state) => state.persons.data);
-  console.log("🚀 ~ file: Slider.js ~ line 60 ~ Slider ~ persons", persons);
 
   return (
     <div className="container py-6 mx-auto">

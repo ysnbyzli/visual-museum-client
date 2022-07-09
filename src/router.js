@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import NotFoundPage from "./pages/404";
 import Home from "./pages/Home";
 import Persons from "./pages/Persons";
-import PersonDetail from "./pages/PersonDetail";
+import Detail from "./pages/Persons/Detail";
 
 export const ROUTES = [
   {
@@ -24,8 +24,8 @@ export const ROUTES = [
     id: "3",
     title: "Zaman Çizelgesi",
     key: "TIMELINE",
-    path: "/detail/:id",
-    element: <PersonDetail />,
+    path: "/kisiler/:id",
+    element: <Detail />,
   },
 ];
 
